@@ -56,14 +56,15 @@ ScaleDB is designed to provide a consistent yet flexible framework for data stor
 
 # Sample structured data (pseudocode)
 ```
-/* NOTE: for convenience, the key (i.e. unique ID) may also be mirrored as a struct field (not shown here);
-   that behavior is consistent with many NoSQL databases (which represent ID as a field in each record instance) */
+/* NOTE: for convenience, the key (i.e. unique ID) may also be mirrored as a struct field (not shown
+   here); that behavior is consistent with many NoSQL databases (which represent ID as a field in each
+   record instance) */
 
 struct automobile {
     number_of_wheels: uint8,
     color: string,
     mileage: uint32,
-    license_tag: Option<string>
+    license_tag: string?
 }
 ```
 

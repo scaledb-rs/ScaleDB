@@ -18,7 +18,7 @@ ScaleDB is designed to provide a consistent yet flexible framework for data stor
     - Structured data (e.g. strongly-typed structs) 
     - Semi-structured data (e.g. dynamically-typed objects)
     - Unstructured data (e.g. text files)
-  - Strongly-typed data can contain dynamically-typed fields (see "object" type)
+  - Strongly-typed data can contain dynamically-typed fields (see "any" and "object" types)
   - Structured data also supports optionals (nullable types)
 - Expire specified values at a certain timestamp or after a defined duration
 - Multiple runtime scenarios
@@ -32,17 +32,20 @@ ScaleDB is designed to provide a consistent yet flexible framework for data stor
   - Support planned for additional platforms in the future
 
 # Supported data types
-- int8, int16, int32, int64, int128
-- uint8, uint16, uint32, uint64, uint128
-- float32, float64
-- boolean
-- object (accepts any type)
-- vector
-
-# Convenience data types
-- uint8 vector (i.e. byte array)
-- string (a UTF-8 encoded representation of a uint8 vector)
-- timestamp (NOTE: if generated using system time, not guaranteed to be monotonic)
+- Simple data types
+  - int8, int16, int32, int64, int128
+  - uint8, uint16, uint32, uint64, uint128
+  - float32, float64
+  - boolean
+  - any (dynamically-typed)
+- Composite data types
+  - vector
+  - struct (strongly-typed)
+  - object (dynamically-typed)
+- Convenience data types
+  - uint8 vector (i.e. byte array)
+  - string (a UTF-8 encoded representation of a uint8 vector)
+  - timestamp (NOTE: if generated using system time, not guaranteed to be monotonic)
 
 # Potential applications
 - Queues
@@ -80,6 +83,6 @@ var festival = object {
 # Legal notice
 ScaleDB is a trademark of ScaleDB LLC, the organization that maintains the ScaleDB open source project.
 
-The source code is licensed under a permissive open-source license (MIT). This license deals primarily with copyright and does not grant license to trademark(s). 
+This software is licensed under a permissive open-source license (MIT). This license does not grant license to trademarks.
 
 You may use the project's trademark(s) as reasonably required for customary use in describing the origin of the original work. Thank you for respecting the project's trademark(s).

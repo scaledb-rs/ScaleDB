@@ -5,3 +5,4 @@ edition = "2021"
 repository = "https://github.com/scaledb-rs/ScaleDB"
 
 [dependencies]
+scaledb-engine = { path = "../scaledb-engine" }
